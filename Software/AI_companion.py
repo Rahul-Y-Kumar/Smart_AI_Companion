@@ -102,9 +102,9 @@ def listen_with_google():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         print("Your AI companion is listening...")
-        play_sound("../Resources/listen.mp3")
+        play_sound("Resources/listen.mp3")
         audio = recognizer.listen(source)
-        play_sound("../Resources/convert.mp3")
+        play_sound("Resources/convert.mp3")
         try:
             text = recognizer.recognize_google(audio).lower()
             print("You said:", text)
